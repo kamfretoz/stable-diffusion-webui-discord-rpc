@@ -1,19 +1,20 @@
-# Discord Rich Presence for AUTOMATIC1111's WebUI
+# Stable Diffusion WebUI's Discord RPC
 
- Silent extension providing connection to Discord RPC, so it would show a fancy table in the user profile. Extension is silent, so no additional tabs will clutter your visual space.
- 
- ## Screenshots
- 
- ![scrf](https://user-images.githubusercontent.com/14872007/213799060-4d6d03de-8fdd-4bd8-a686-7d64d3f54ad8.png)
- 
- ## References
- 
- The plugin uses this python connector to RPC https://github.com/LyQuid12/Discord-RPC.
+Discord Rich Presence for AUTOMATIC1111's WebUI, it will show the status of your WebUI. 
+This extension does not provide any kind of configuration and will not show up anywhere on the WebUI
 
-### The code allowing dynamic updates have some threading problems, so is disabled for now. If you liked this extension or its idea, I'd appreciate any help in its development.
+Originally forked from https://github.com/kabachuha/discord-rpc-for-automatic1111-webui
 
-## Known issues and troubleshooting
 
-In case it will give a package error after the installation, restart the webui.
+## Screenshots
 
-To uninstall the extension, in case it freezes the program, close the webui, go to the 'extensions' folder and remove the plugin.
+![Screenshot_20230317_205900](https://user-images.githubusercontent.com/14798312/225926095-2651f98a-c378-4da2-83f7-590dee39feca.png)
+
+
+## References
+
+This project uses [pypresence](https://github.com/qwertyquerty/pypresence) to take care of Discord RPC's side of things
+
+## Installation
+
+To install the extension, clone this repository to the `extensions` folder of your local WebUI environment.
