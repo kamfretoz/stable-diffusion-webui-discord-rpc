@@ -5,15 +5,15 @@ import time, os
 
 CLIENT_ID = '1065987911486550076'
 
-def start_rpc():
+def check_deps():
     from launch import is_installed, run_pip
     if not is_installed("pypresence"):
         print("Installing the missing 'pypresence' package and its dependencies,")
-        print("In case it will give a package error after the installation, restart the webui.")
+        print("In case it gave a package error after the installation, restart the webui.")
         run_pip("install pypresence", "pypresence")
-    
+
+def start_rpc():
     from pypresence import Presence
-    import time
     
     print('Starting Discord RPC extension')
     RPC = Presence(CLIENT_ID)
@@ -27,6 +27,7 @@ def on_ui_tabs():
     start_rpc()
     return []
 
+check_deps()
 script_callbacks.on_ui_tabs(on_ui_tabs)
 
 # Dynamic status check
